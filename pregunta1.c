@@ -7,6 +7,7 @@ int main () {
 
     int opciones = 0;
     
+    int contador = 0;
     printf("Escriba un numero\n");
     
     scanf("%u", &registro);
@@ -62,7 +63,14 @@ int main () {
                 }
             case 5:
             case 6:
-                
+                for (int i = 0; i<31; i++) {
+                    int bit = auxiliar >> i;
+
+                    if (bit == 1){
+                        contador++;
+                    }
+                }
+                printf("Bits encendidos: %d \n", contador);
             case 7:                                 break;
             }
         printf("Nuevo resultado: %u \n", auxiliar);
